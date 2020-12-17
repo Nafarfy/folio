@@ -1,0 +1,65 @@
+@import 'config';
+
+.container {
+  max-width: 1168px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+a {text-decoration: none;}
+
+// flexes
+.flex {
+  display: flex;
+}
+
+.flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// colors for work items
+.blue {background: #baecee;}
+.pink {background: #fae1ef;}
+.flesh {background: #fefbe5;}
+.dark-pink {background: #e8bdf5;}
+
+
+.btn {
+  display: block;
+  position: absolute;
+  bottom: 60px;
+  right: 82px;
+  border: 1px solid $main-color;
+  padding: 6px 9.5px;
+
+  &:after {
+    content: 'read more';
+    position: relative;
+    top: -2px;
+    right: -35px;
+    font-size: 20px;
+    font-weight: 500;
+    color: $main-color;
+    transition: all .5s ease-in-out;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 17px;
+    left: -31px;
+    height: 1px;
+    width: 64px;
+    background: $main-color;
+    transition: all .5s ease-in-out;
+  }
+
+  &:hover:after {right: 0;}
+  &:hover:before {left: -65px;}
+}
