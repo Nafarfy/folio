@@ -385,6 +385,7 @@ body {
   position: absolute;
   left: 197px;
   top: 0;
+  z-index: 12;
 }
 
 #header .container .title {
@@ -590,6 +591,17 @@ body {
   font-weight: 600;
   line-height: 22px;
   color: #aeadae;
+}
+
+#footer .container .footer-items p a {
+  font-weight: bold;
+  color: #aeadae;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+#footer .container .footer-items p a:hover {
+  color: #79e5e9;
 }
 
 #footer .container .footer-items .social {
