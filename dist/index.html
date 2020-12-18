@@ -7,11 +7,72 @@
   <link
     href="https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
     rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+    integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
   <link rel="stylesheet" href="css/main.css">
   <title>Folio</title>
 </head>
 
 <body>
+  <!-- About Me | Slide Drop -->
+  <section id="about-me">
+    <div class="about-items flex-column flex-align-center">
+      <div class="avatar">
+        <img src="img/about/Shape.png" alt="" class="shape">
+        <img src="img/about/Shape_2.png" alt="" class="shape-wave">
+        <img src="img/about/Shape1.png" alt="" class="shape-arrow">
+        <div class="download flex">
+          <button class="load"><i class="fas fa-arrow-down "></i></button>
+          <p>Download resume</p>
+        </div>
+      </div>
+      <div class="about-text flex-column flex-align-center">
+        <h2>Hello, i'm <span>John</span> <span class="span-bold">Smith</span></h2>
+        <p>nec ullamcorper augue sagittis. Proin faucibus lorem nisl, Donec commodo leo est, quis eleifend urna
+          pellentesque eget. </p>
+        <p class="contact-text">Proin scelerisque odio eu nisi viverra, nec ullamcorper gue <a href="#">contact me</a>
+        </p>
+      </div>
+      <div class="skills wrap flex-justify-center">
+        <div class="photoshop skill-item">
+          <h4>Photoshop</h4>
+          <div class="progress-bar">
+            <span style="width: 98%; background: #c62fc6;"></span>
+          </div>
+          <p>98%</p>
+        </div>
+        <div class="illustrator skill-item">
+          <h4>Illustrator</h4>
+          <div class="progress-bar">
+            <span style="width: 70%; background: #f2d25d;"></span>
+          </div>
+          <p>70%</p>
+        </div>
+        <div class="html-css skill-item">
+          <h4>HTML / CSS</h4>
+          <div class="progress-bar">
+            <span style="width: 60%; background: #2959e1;"></span>
+          </div>
+          <p>60%</p>
+        </div>
+      </div>
+      <div class="dates flex-justify-center">
+        <div class="designer date-item">
+          <h3>2000 - 2008</h3>
+          <p>3r. Graphic Designer <span>|</span> <span class="span-blue">ABC Inc.</span></p>
+        </div>
+        <div class="specialist date-item">
+          <h3>2008 - 2010</h3>
+          <p>Graphic Specialist <span>|</span> <span class="span-blue">GRAPHICSTUDIO</span></p>
+        </div>
+        <div class="director date-item">
+          <h3>2010 - Present</h3>
+          <p>Creative Director <span>|</span> <span class="span-blue">DESIGN ARTS</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Header -->
   <header id="header">
     <div class="container">
@@ -62,6 +123,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="js/main.js"></script>
 </body>
 
 </html>

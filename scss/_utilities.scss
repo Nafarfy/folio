@@ -13,6 +13,15 @@ a {text-decoration: none;}
   display: flex;
 }
 
+.wrap {
+  flex-wrap: wrap;
+}
+
+.flex-justify-center {
+  display: flex;
+  justify-content: center;
+}
+
 .flex-align-center {
   display: flex;
   align-items: center;
@@ -62,4 +71,35 @@ a {text-decoration: none;}
 
   &:hover:after {right: 0;}
   &:hover:before {left: -65px;}
+}
+
+// Burger on click
+.burgerX {
+  position: relative;
+  width: 20px;
+  height: 16px;
+  cursor: pointer;
+  z-index: 11;
+  &:before,
+  &:after {
+    content: '';
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    transition: all 0.5s;
+  }
+  &:before {
+    top: 6px;
+    transform: rotate(45deg);
+  }
+  &:after {
+    bottom: 8px;
+    transform: rotate(-45deg);
+  }
+
+  span {
+    display: none;
+  }
 }

@@ -14,6 +14,20 @@ a {
   display: flex;
 }
 
+.wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.flex-justify-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .flex-align-center {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -90,6 +104,41 @@ a {
   left: -65px;
 }
 
+.burgerX {
+  position: relative;
+  width: 20px;
+  height: 16px;
+  cursor: pointer;
+  z-index: 11;
+}
+
+.burgerX:before, .burgerX:after {
+  content: '';
+  background-color: #fff;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.burgerX:before {
+  top: 6px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.burgerX:after {
+  bottom: 8px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.burgerX span {
+  display: none;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -105,6 +154,227 @@ body {
   font-family: 'Montserrat', sans-serif;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(37.3%, #f2fbfb), color-stop(30%, #fff));
   background: linear-gradient(to top, #f2fbfb 37.3%, #fff 30%);
+}
+
+#about-me {
+  position: absolute;
+  top: -1500px;
+  left: 0;
+  width: 100%;
+  background: #201e20;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  z-index: 10;
+}
+
+#about-me .about-items .avatar {
+  position: relative;
+  height: 226px;
+  width: 226px;
+  margin: 18rem 0 0 5px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+#about-me .about-items .avatar img {
+  position: absolute;
+}
+
+#about-me .about-items .avatar .shape {
+  top: 15px;
+  left: -185px;
+  width: 21px;
+}
+
+#about-me .about-items .avatar .shape-wave {
+  bottom: 40px;
+  left: -17px;
+  width: 70px;
+}
+
+#about-me .about-items .avatar .shape-arrow {
+  top: 81px;
+  right: -357px;
+}
+
+#about-me .about-items .avatar .download {
+  position: absolute;
+  top: 55px;
+  right: -117px;
+}
+
+#about-me .about-items .avatar .download .load {
+  width: 38px;
+  height: 38px;
+  margin-right: 7px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  background: #d82547;
+}
+
+#about-me .about-items .avatar .download .load i {
+  font-size: 22px;
+  color: #fae5e9;
+}
+
+#about-me .about-items .avatar .download p {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 100px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 0.9;
+}
+
+#about-me .about-items .about-text {
+  margin: 85px 0 0 5px;
+}
+
+#about-me .about-items .about-text h2 {
+  font-size: 40px;
+  font-weight: 500;
+  color: #aeadae;
+  letter-spacing: 2.4px;
+}
+
+#about-me .about-items .about-text h2 span {
+  color: #fff;
+}
+
+#about-me .about-items .about-text h2 .span-bold {
+  font-weight: 800;
+}
+
+#about-me .about-items .about-text p {
+  max-width: 980px;
+  margin-top: 10.5px;
+  line-height: 35px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  color: #aeadae;
+}
+
+#about-me .about-items .about-text .contact-text {
+  margin-top: 40.5px;
+}
+
+#about-me .about-items .about-text .contact-text a {
+  color: #79e5e9;
+}
+
+#about-me .about-items .about-text .contact-text a:hover {
+  border-bottom: 2px solid #79e5e9;
+}
+
+#about-me .about-items .skills {
+  margin: 122px 0 0 7px;
+}
+
+#about-me .about-items .skills .skill-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 99px;
+}
+
+#about-me .about-items .skills .skill-item:last-child {
+  margin-right: 0;
+}
+
+#about-me .about-items .skills .skill-item h4 {
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+#about-me .about-items .skills .skill-item .progress-bar {
+  position: relative;
+  width: 300px;
+  height: 5px;
+  margin-top: 24px;
+  border-radius: 30px;
+  background: #000;
+}
+
+#about-me .about-items .skills .skill-item .progress-bar span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 30px;
+}
+
+#about-me .about-items .skills .skill-item p {
+  margin-top: 15px;
+  font-weight: 700;
+  font-size: 17px;
+  color: #aeadae;
+}
+
+#about-me .about-items .dates {
+  width: 100%;
+  margin-top: 59px;
+  border-top: 1px solid #2f2d2f;
+}
+
+#about-me .about-items .dates .date-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 401px;
+  height: 192px;
+  padding: 0 0 13px 10px;
+}
+
+#about-me .about-items .dates .date-item:nth-child(2) {
+  border-left: 1px solid #2f2d2f;
+  border-right: 1px solid #2f2d2f;
+}
+
+#about-me .about-items .dates .date-item h3 {
+  font-size: 33px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+#about-me .about-items .dates .date-item p {
+  font-weight: 500;
+  color: #fff;
+  margin-top: 10px;
+}
+
+#about-me .about-items .dates .date-item p span {
+  color: #626162;
+}
+
+#about-me .about-items .dates .date-item p .span-blue {
+  color: #79e5e9;
 }
 
 #header .container {
@@ -159,6 +429,8 @@ body {
   position: relative;
   width: 20px;
   height: 16px;
+  cursor: pointer;
+  z-index: 11;
 }
 
 #header .container .title .burger:before, #header .container .title .burger:after {
@@ -168,8 +440,8 @@ body {
   width: 100%;
   height: 2px;
   left: 0;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 #header .container .title .burger:before {
@@ -187,8 +459,8 @@ body {
   width: 100%;
   height: 2px;
   top: 7px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 #header .container .greetings {
