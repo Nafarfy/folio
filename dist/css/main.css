@@ -640,7 +640,7 @@ body {
     margin-right: 0;
   }
   #header {
-    padding: 2rem;
+    padding: 0 2rem;
   }
   #header .container .dotted-bg {
     left: 0;
@@ -660,10 +660,14 @@ body {
   #about-me .about-items .skills .skill-item {
     margin-right: 0;
     margin-top: 2rem;
+    padding: 0 5px;
   }
 }
 
 @media (max-width: 640px) {
+  #about-me .about-items .avatar {
+    margin: 14rem 0 0 0;
+  }
   #about-me .about-items .avatar .shape {
     display: none;
   }
@@ -697,6 +701,9 @@ body {
   }
   #about-me .about-items .dates .date-item h3 {
     font-size: 25px;
+  }
+  #header .container .title {
+    margin-top: 110px;
   }
   #header .container .greetings h1 {
     font-size: 100px;
