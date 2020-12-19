@@ -146,14 +146,8 @@ a {
           box-sizing: border-box;
 }
 
-html {
-  background: #f2fbfb;
-}
-
 body {
   font-family: 'Montserrat', sans-serif;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(37.3%, #f2fbfb), color-stop(30%, #fff));
-  background: linear-gradient(to top, #f2fbfb 37.3%, #fff 30%);
 }
 
 #about-me {
@@ -162,8 +156,8 @@ body {
   left: 0;
   width: 100%;
   background: #201e20;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  -webkit-transition: all .6s ease-in-out;
+  transition: all .6s ease-in-out;
   z-index: 10;
 }
 
@@ -275,6 +269,8 @@ body {
 
 #about-me .about-items .skills {
   margin: 122px 0 0 7px;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 #about-me .about-items .skills .skill-item {
@@ -289,6 +285,8 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin-right: 99px;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 #about-me .about-items .skills .skill-item:last-child {
@@ -346,6 +344,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-align: center;
   width: 401px;
   height: 192px;
   padding: 0 0 13px 10px;
@@ -475,6 +474,8 @@ body {
   margin-left: -16px;
   letter-spacing: 3px;
   height: 227px;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 #header .container .greetings p {
@@ -491,7 +492,8 @@ body {
 }
 
 #main {
-  margin-top: 182px;
+  position: relative;
+  top: 180px;
 }
 
 #main .container {
@@ -531,30 +533,13 @@ body {
 }
 
 #footer {
-  position: relative;
-  top: -134px;
-}
-
-#footer .container {
-  overflow: visible;
+  background: #f2fbfb;
+  margin-top: 45px;
 }
 
 #footer .container .footer-items {
-  position: relative;
-  margin-top: 246px;
+  margin-top: 248px;
   text-align: center;
-}
-
-#footer .container .footer-items:after {
-  content: '';
-  position: absolute;
-  bottom: -145px;
-  right: 46%;
-  width: 86px;
-  height: 1px;
-  background: #070707;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
 }
 
 #footer .container .footer-items h3 {
@@ -624,4 +609,151 @@ body {
 
 #footer .container .footer-items .social a:last-child {
   margin-right: 0;
+}
+
+#footer .container .footer-items .bottom-line {
+  width: 170px;
+  height: 1px;
+  background: #070707;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  margin-top: 186px;
+}
+
+@media (max-width: 1583px) {
+  #main .container .work-items .work-item .arrow-shape {
+    display: none;
+  }
+}
+
+@media (max-width: 1366px) {
+  #main .container .work-items .work-item img {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  #about-me .about-items .skills .skill-item {
+    margin-right: 120px;
+  }
+  #about-me .about-items .skills .skill-item:nth-child(2) {
+    margin-right: 0;
+  }
+  #header {
+    padding: 2rem;
+  }
+  #header .container .dotted-bg {
+    left: 0;
+  }
+}
+
+@media (max-width: 943px) {
+  #header .container .greetings img {
+    display: none;
+  }
+  #about-me .about-items .avatar .shape-arrow {
+    display: none;
+  }
+}
+
+@media (max-width: 725px) {
+  #about-me .about-items .skills .skill-item {
+    margin-right: 0;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  #about-me .about-items .avatar .shape {
+    display: none;
+  }
+  #about-me .about-items .avatar .download {
+    top: -6px;
+    right: -64px;
+  }
+  #about-me .about-items .about-text {
+    margin: 85px 0 0 0;
+    padding: 5px;
+    text-align: center;
+  }
+  #about-me .about-items .about-text h2 {
+    max-width: 330px;
+  }
+  #about-me .about-items .about-text p {
+    margin-top: 15px;
+  }
+  #about-me .about-items .dates {
+    display: block;
+  }
+  #about-me .about-items .dates .date-item {
+    width: auto;
+    padding: 0;
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid #2f2d2f;
+  }
+  #about-me .about-items .dates .date-item:first-child {
+    border-top: none;
+  }
+  #about-me .about-items .dates .date-item h3 {
+    font-size: 25px;
+  }
+  #header .container .greetings h1 {
+    font-size: 100px;
+    margin-left: 0;
+    height: 150px;
+  }
+  #main {
+    top: 0;
+    margin-top: 10rem;
+  }
+  #main .container .work-items {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  #main .container .work-items .work-item:nth-child(3) {
+    -ms-grid-row: 4;
+    grid-row: 4;
+  }
+  #main .container .work-items .work-item .btn {
+    right: 50%;
+  }
+  #main .container .work-items .work-item .btn:after {
+    right: 0;
+  }
+  #main .container .work-items .work-item .btn:before {
+    display: none;
+  }
+  #footer {
+    margin-top: 0;
+  }
+  #footer .container .footer-items {
+    margin-top: 10rem;
+  }
+  #footer .container .footer-items .phoneNumber {
+    font-size: 40px;
+    margin: 70px 0 0 0;
+  }
+  #footer .container .footer-items p {
+    margin: 30px 0 0 0;
+  }
+  #footer .container .footer-items .social a {
+    margin-right: 6px;
+  }
+}
+
+@media (max-width: 360px) {
+  #header {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 325px) {
+  #about-me .about-items .avatar .shape {
+    display: none;
+  }
+  #about-me .about-items .avatar .download {
+    top: -15px;
+    right: -36px;
+  }
 }

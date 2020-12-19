@@ -1,0 +1,183 @@
+@media(max-width: 1583px) {
+  #main {
+    .container {    
+      .work-items {  
+        .work-item {  
+          .arrow-shape{display: none;}
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 1366px) {
+  #main {
+    .container {    
+      .work-items {  
+        .work-item {  
+          img{display: none;}
+        }
+      }
+    }
+  }
+}
+
+// Tablets
+@media(max-width: 1024px) {
+  #about-me {
+    .about-items {
+      .skills {
+        .skill-item {
+          margin-right: 120px;
+          &:nth-child(2) {margin-right: 0;}
+        }
+      }
+    }
+  }
+
+  // Header
+  #header {
+    padding: 2rem;
+    .container {
+      .dotted-bg {left: 0;}
+    }
+  }
+}
+
+@media(max-width: 943px) {
+  #header {
+    .container {
+      .greetings {
+        img {display: none;}
+      }
+    }
+  }
+  #about-me {
+    .about-items {
+      .avatar {
+        .shape-arrow {display: none;}
+      }
+    }
+  }
+}
+
+@media(max-width: 725px) {
+  #about-me {
+    .about-items {
+      .skills {
+        .skill-item {
+          margin-right: 0;
+          margin-top: 2rem;
+        }
+      }
+    }
+  }
+}
+
+// Phones 
+@media(max-width: 640px) {
+  // About
+  #about-me {
+    .about-items {
+      .avatar {
+        .shape {display: none;}
+        .download {
+          top: -6px;
+          right: -64px;
+        }
+      }
+
+      .about-text {
+        margin: 85px 0 0 0;
+        padding: 5px;
+        text-align: center;
+        h2 {max-width: 330px;}
+        p {margin-top: 15px;}
+      }
+
+      .dates {
+        display: block;
+        .date-item {
+          width: auto;
+          padding: 0;
+          border-left: none;
+          border-right: none;
+          border-top: 1px solid #2f2d2f;
+          &:first-child {border-top: none}
+
+          h3 {font-size: 25px;}
+        }
+      }
+    }
+  }
+
+  // Header
+  #header {
+    .container {
+      .greetings {
+        h1 {
+          font-size: 100px;
+          margin-left: 0;
+          height: 150px;
+        }
+      }
+    }
+  }
+
+  // Works
+  #main {
+    top: 0;
+    margin-top: 10rem;
+
+    .container {
+      .work-items {
+        grid-template-columns: repeat(1, 1fr);
+        .work-item{
+          &:nth-child(3) {grid-row: 4;}
+          .btn {
+            right: 50%;
+            &:after {right: 0;}
+            &:before {display: none;}
+          }
+        }
+      }
+    }
+  }
+
+  // Footer 
+  #footer {
+    margin-top: 0;
+    .container {
+      .footer-items {
+        margin-top: 10rem;
+        .phoneNumber {
+          font-size: 40px;
+          margin: 70px 0 0 0;
+        }
+        p {margin: 30px 0 0 0;}
+        .social {
+          a {margin-right: 6px;}
+        }
+      }
+    }
+  }
+}
+
+// smaller
+@media(max-width: 360px) {
+  #header {padding: 1rem;}
+}
+
+@media(max-width: 325px)  {
+  #about-me {
+    .about-items {
+      .avatar {
+        .shape {display: none;}
+        .download {
+          top: -15px;
+          right: -36px;
+        }
+      }
+    }
+  }
+}

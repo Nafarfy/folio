@@ -1,6 +1,5 @@
 @import 'utilities';
 @import 'config';
-@import 'media';
 
 * {
   margin: 0;
@@ -8,13 +7,8 @@
   box-sizing: border-box;
 }
 
-html {
-  background: $footer-bg;
-}
-
 body {
   font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(to top, $footer-bg 37.3%, #fff 30%);
 }
 
 // About Me | Slide Drop
@@ -24,7 +18,7 @@ body {
   left: 0;
   width: 100%;
   background: #201e20;
-  transition: all .5s ease-in-out;
+  transition: all .6s ease-in-out;
   z-index: 10;
   
   .about-items {
@@ -118,12 +112,16 @@ body {
     }
     .skills {
       margin: 122px 0 0 7px;
+      transition: all .3s ease-in-out;
+
       
       .skill-item {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-right: 99px;
+        transition: all .3s ease-in-out;
+
         &:last-child {margin-right: 0;}
 
         h4 {
@@ -169,6 +167,7 @@ body {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        text-align: center;
         width: 401px;
         height: 192px;
         padding: 0 0 13px 10px;
@@ -191,6 +190,7 @@ body {
           margin-top: 10px;
           span {color: #626162;}
           .span-blue {color: $light-blue;}
+
         }
       }
     }
@@ -284,6 +284,7 @@ body {
         margin-left: -16px;
         letter-spacing: 3px;
         height: 227px;
+        transition: all .3s ease-in-out;
       }
       p {
         font-size: 13px;
@@ -302,7 +303,9 @@ body {
 
 // Works
 #main {
-  margin-top: 182px;
+  position: relative;
+  top: 180px;
+
   .container {
     overflow: visible;
   
@@ -337,27 +340,13 @@ body {
 
 // Footer
 #footer {
-  position: relative;
-  top: -134px;
+  background: $footer-bg;
+  margin-top: 45px;
 
   .container {
-    overflow: visible;
-
     .footer-items {
-      position: relative;
-      margin-top: 246px;
+      margin-top: 248px;
       text-align: center;
-
-      &:after {
-        content: '';
-        position: absolute;
-        bottom: -145px;
-        right: 46%;
-        width: 86px;
-        height: 1px;
-        background: #070707;
-        transform: rotate(90deg);
-      }
 
       h3 {
         margin-left: 24px;
@@ -376,7 +365,6 @@ body {
         color: $main-color;
         margin: 70px 0 0 10px;
         transition: all .3s ease-in-out;
-
         &:hover {color: $light-blue;}
       }
 
@@ -392,10 +380,7 @@ body {
           font-weight: bold;
           color: $secondary-color;
           transition: all .3s ease-in-out;
-
-          &:hover {
-            color: $light-blue;
-          }
+          &:hover {color: $light-blue;}
         }
       }
 
@@ -415,6 +400,16 @@ body {
           &:last-child {margin-right: 0;}
         }
       }
+
+      .bottom-line {
+        width: 170px;
+        height: 1px;
+        background: #070707;
+        transform: rotate(90deg);
+        margin-top: 186px;
+      }
     }
   }
 }
+
+@import 'media';
